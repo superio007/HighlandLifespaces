@@ -137,7 +137,7 @@ const Footer = () => {
             <Image
               src={LOGOLINES}
               alt="LOGOLINES"
-              className="absolute right-0 bottom-0 -z-10 pointer-events-none"
+              className="absolute right-0 bottom-0 z-10 pointer-events-none"
             />
           </div>
           <div className="p-6 bg-[#232227] md:px-20  flex flex-col items-center justify-between gap-6 border-t border-neutral-800 pt-6 md:flex-row">
