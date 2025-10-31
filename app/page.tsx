@@ -1,7 +1,10 @@
-export default function Home() {
+import HeroBanner from "@/components/Banner/HeroBanner";
+function Home() {
   return (
     <>
-      <div></div>
+      <HeroBanner />
     </>
   );
 }
+
+export default Home;
