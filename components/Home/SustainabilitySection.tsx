@@ -26,19 +26,25 @@ type Doc = {
 };
 
 const FEATURES: Feature[] = [
-  { icon: <Droplets className="w-6 h-6" />, title: "Rainwater harvesting" },
-  { icon: <Sun className="w-6 h-6" />, title: "Solar facilities" },
   {
-    icon: <CircleSlash2 className="w-6 h-6" />,
+    icon: "https://ik.imagekit.io/jamlkxwow/Frame%202085662875.png",
+    title: "Rainwater harvesting",
+  },
+  {
+    icon: "https://ik.imagekit.io/jamlkxwow/Frame%202085662877.png",
+    title: "Solar facilities",
+  },
+  {
+    icon: "https://ik.imagekit.io/jamlkxwow/Frame%202085662874.png",
     title: "High-efficiency HVAC systems",
   },
   {
-    icon: <Wind className="w-6 h-6" />,
+    icon: "https://ik.imagekit.io/jamlkxwow/Frame%202085662872.png",
     title: "Natural ventilation",
     subtitle: "interior design",
   },
   {
-    icon: <ShowerHead className="w-6 h-6" />,
+    icon: "https://ik.imagekit.io/jamlkxwow/Frame%202085662873.png",
     title: "Water-saving fixtures",
     subtitle: "and appliances",
   },
@@ -50,6 +56,13 @@ const DOCS: Doc[] = [
   { badge: "Report", year: "2024", title: "Environmental Clearance" },
   { badge: "REPORT", year: "2024", title: "Zero Waste + Energy Homes" },
 ];
+
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/Dhoke_Kiran_Resume.pdf"; // file path in /public
+  link.download = "Dhoke_Kiran_Resume.pdf"; // suggested file name
+  link.click();
+};
 
 const SustainabilitySection = () => {
   return (
@@ -89,11 +102,16 @@ const SustainabilitySection = () => {
             <ul className="divide-y divide-gray-200">
               {FEATURES.map((f, i) => (
                 <li key={i} className="flex items-center justify-between py-6">
-                  <div className="flex items-center gap-6">
-                    <div className="rounded-full border border-indigo-300 p-3 text-indigo-700">
-                      {f.icon}
+                  <div className="flex justify-between w-full items-center gap-6">
+                    <div className="w-full">
+                      <Image
+                        src={f.icon}
+                        alt={f.title}
+                        width={44}
+                        height={44}
+                      />
                     </div>
-                    <div className="text-left">
+                    <div className="text-left w-full">
                       <p className="text-gray-900">{f.title}</p>
                       {f.subtitle && (
                         <p className="text-gray-500">{f.subtitle}</p>
@@ -122,7 +140,10 @@ const SustainabilitySection = () => {
               </div>
               <div className="flex items-center justify-between">
                 <p className="text-gray-900">{d.title}</p>
-                <Download className="h-5 w-5 text-gray-500 transition group-hover:translate-y-0.5" />
+                <Download
+                  onClick={handleDownload}
+                  className="h-5 w-5 text-gray-500 transition group-hover:translate-y-0.5"
+                />
               </div>
             </a>
           ))}

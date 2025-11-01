@@ -34,7 +34,7 @@ const CARDS: Card[] = [
 
 const ConstructionProgress = () => {
   return (
-    <section className="w-full px-6 md:px-20 py-12">
+    <section className="w-full px-6 md:px-20 py-20">
       <div className="">
         {/* Overline */}
         <p className="text-center text-xs tracking-[0.2em] text-gray-500 uppercase">
