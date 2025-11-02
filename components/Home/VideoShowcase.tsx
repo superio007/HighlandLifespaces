@@ -1,7 +1,8 @@
+"use client";
 import BackgroundVideo from "next-video/background-video";
-import PosterImage from "@/assets/PosterImage.jpg";
-import LocIcon from "@/assets/LocIcon.png";
-import FullScreenIcon from "@/assets/FullScreenIcon.png";
+import PosterImage from "@/assets/PosterImage.webp";
+import LocIcon from "@/assets/LocIcon.webp";
+import FullScreenIcon from "@/assets/FullScreenIcon.webp";
 import Image from "next/image";
 
 const VideoShowcase = () => {

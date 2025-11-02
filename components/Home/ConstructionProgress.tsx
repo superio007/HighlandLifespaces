@@ -1,3 +1,4 @@
+"use client";
 import BackgroundVideo from "next-video/background-video";
 
 type Card = {

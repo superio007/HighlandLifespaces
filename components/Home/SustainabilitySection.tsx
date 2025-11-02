@@ -1,4 +1,3 @@
-// app/components/SustainabilitySection.tsx
 "use client";
 
 import Image from "next/image";

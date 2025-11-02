@@ -2,10 +2,9 @@
 "use client";
 import Image from "next/image";
 import ContactForm, { ContactFormValues } from "./ContactForm";
-import PropertyMark from "@/assets/PropertyMark.png";
+import PropertyMark from "@/assets/PropertyMark.webp";
 
 export default function ContactSection() {
-
   return (
     <section className="relative w-full">
       {/* Map background */}

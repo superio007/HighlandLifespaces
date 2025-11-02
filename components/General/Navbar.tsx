@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import HighlandLifespacesLogo from "@/assets/HighlandMainLogo.png";
-import MenuIcon from "@/assets/MenuIcon.png";
+import HighlandLifespacesLogo from "@/assets/HighlandMainLogo.webp";
+import MenuIcon from "@/assets/MenuIcon.webp";
 import { ChevronRight, X } from "lucide-react";
 
 const Navbar = () => {
@@ -62,7 +62,7 @@ const Navbar = () => {
         className={`fixed top-0 right-0 h-dvh w-[85%] sm:w-[420px]
      backdrop-blur-xl border-l border-black/10
     shadow-2xl transform transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)]
-    ${isOpen ? "translate-x-0" : "translate-x-full"} z-50`}
+    ${isOpen ? "translate-x-0" : "translate-x-full"} z-60`}
       >
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-5">

@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import HeroBannerImg from "@/assets/HeroBanner.webp";
-import BannerBuildingImg from "@/assets/BannerBuilding.png";
+import BannerBuildingImg from "@/assets/BannerBuilding.webp";
 
 type Stat = {
   key: string;
