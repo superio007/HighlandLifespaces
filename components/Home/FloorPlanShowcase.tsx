@@ -254,7 +254,7 @@ const DATA: FloorPlanData = {
 export default function FloorPlan() {
   return (
     <>
-      <div className="h-screen container mx-auto px-6 md:px-20 py-20">
+      <div className="container mx-auto px-6 md:px-20 md:py-20">
         <FloorPlanShowcase data={DATA} />
       </div>
     </>

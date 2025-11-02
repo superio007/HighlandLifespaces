@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import Markers from "@/assets/Markers.svg";
 import {
   GraduationCap,
   Hospital,
@@ -118,8 +119,8 @@ export default function NeighborhoodSection({ data = DATA }: { data?: Data }) {
   }, [data.markers]);
 
   return (
-    <section className="w-full bg-[#F4F4F4] py-16">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
+    <section className="w-full">
+      <div className="mx-auto container px-6 md:px-20 md:py-20">
         {/* Title */}
         <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
           {data.subtitle ?? "Location"}
@@ -130,15 +131,14 @@ export default function NeighborhoodSection({ data = DATA }: { data?: Data }) {
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-12">
           {/* Map */}
-          <div className="relative md:col-span-9 rounded-xl overflow-hidden bg-white ring-1 ring-black/5">
+          <div className="relative md:col-span-9 rounded-xl overflow-hidden ring-1 ring-black/5">
             {/* Map image */}
-            <div className="relative h-[560px] w-full">
+            <div className="h-screen">
               <Image
                 src={data.mapImg}
                 alt="Map"
                 fill
                 className="object-cover opacity-60"
-                sizes="(min-width: 1024px) 70vw, 100vw"
                 priority={false}
               />
 
@@ -172,9 +172,9 @@ export default function NeighborhoodSection({ data = DATA }: { data?: Data }) {
                   top: `${data.project.y}%`,
                 }}
               >
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-800 text-white shadow">
-                    <MapPin className="h-5 w-5" />
+                    <Image src={Markers} alt="Markers" />
                   </div>
                   <span className="rounded bg-white px-3 py-1 text-xs font-semibold tracking-wide shadow">
                     {data.project.name}
@@ -195,13 +195,6 @@ export default function NeighborhoodSection({ data = DATA }: { data?: Data }) {
                     <SmallPin />
                   </div>
                 ))}
-
-              {/* floating arrow (decorative) */}
-              <div className="pointer-events-none absolute right-[18%] top-1/2 -translate-y-1/2">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-300/80 text-gray-700 shadow">
-                  <ArrowRight className="h-5 w-5" />
-                </div>
-              </div>
 
               {/* View in Google Maps */}
               {data.googleMapsUrl && (
