@@ -7,14 +7,15 @@ import FAQSection from "@/components/Home/FAQSection";
 import ContactSection from "@/components/Home/ContactSection";
 import AmenitiesShowcase from "@/components/Home/AmenitiesShowcase";
 import FloorPlanShowcase from "@/components/Home/FloorPlanShowcase";
+import NeighborhoodSection from "@/components/Home/NeighborhoodSection";
 function Home() {
   return (
     <>
-      {/* <HeroBanner /> */}
-
+      <HeroBanner />
       <VideoShowcase />
       <AmenitiesShowcase />
       <FloorPlanShowcase />
+      <NeighborhoodSection />
       <ConstructionProgress />
       <GallerySection />
       <SustainabilitySection />
