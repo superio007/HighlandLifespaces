@@ -107,29 +107,44 @@ export default function AmenitiesShowcase() {
       {/* Amenity bar (full width) */}
       <div className="absolute bottom-0 left-0 w-full">
         <div className="flex justify-center bg-black/30 backdrop-blur-md">
-          <ul className="grid grid-cols-8 divide-x divide-white/20 w-full text-center">
-            {amenities.map((a) => (
-              <li key={a.key}>
-                <button
-                  onClick={() => changeAmenity(a)}
-                  className={`flex flex-col items-center justify-center hover:cursor-pointer gap-2 py-5 w-full transition-all ${
-                    a.key === active.key
-                      ? "text-white scale-105"
-                      : "text-white/70 hover:text-white"
-                  }`}
-                >
-                  <Image
-                    src={a.icon}
-                    alt={a.label}
-                    width={26}
-                    height={26}
-                    className="object-contain"
-                  />
-                  <span className="text-sm">{a.label}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
+          {/* Scrollable wrapper */}
+          <div
+            className="w-full overflow-x-auto scrollbar-none"
+            style={{ scrollbarWidth: "none" }}
+          >
+            <ul
+              className="
+          flex sm:grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8
+          divide-x divide-white/20 text-center
+          min-w-[600px] sm:min-w-0
+        "
+            >
+              {amenities.map((a) => (
+                <li key={a.key} className=" w-full sm:w-auto">
+                  <button
+                    onClick={() => changeAmenity(a)}
+                    className={`flex flex-col items-center hover:cursor-pointer justify-center gap-2 py-4 sm:py-5 w-full transition-all duration-200
+                ${
+                  a.key === active.key
+                    ? "text-white scale-105"
+                    : "text-white/70 hover:text-white"
+                }`}
+                  >
+                    <Image
+                      src={a.icon}
+                      alt={a.label}
+                      width={26}
+                      height={26}
+                      className="object-contain"
+                    />
+                    <span className="text-xs sm:text-sm whitespace-nowrap">
+                      {a.label}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

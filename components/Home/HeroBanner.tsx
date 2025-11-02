@@ -19,7 +19,7 @@ const stats: Stat[] = [
 
 const HeroBanner = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative md:h-screen h-[600px] w-full overflow-hidden">
       {/* Background image */}
       <Image
         src={HeroBannerImg}
@@ -33,7 +33,7 @@ const HeroBanner = () => {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-linear-to-b from-black/20 via-black/30 to-black/70" />
 
       {/* Content (add your hero copy here) */}
-      <div className="relative z-10 container mx-auto px-6 md:px-20 py-12 flex items-center justify-center w-full h-full">
+      <div className="relative z-10 container mx-auto px-6 md:px-20 py-12 flex flex-col md:flex-row items-center justify-center w-full h-full">
         <div className="flex flex-col gap-6 w-full md:w-1/2">
           <h1 className="text-3xl md:text-7xl text-white font-[YourSerif]">
             Highland Mayfield
@@ -59,28 +59,32 @@ const HeroBanner = () => {
       </div>
 
       {/* Bottom stats bar */}
-      <div className="absolute bottom-0 left-0 w-full z-50 px-6 md:px-20 pb-6">
-        <div className="mx-auto w-full rounded-none md:rounded-xl ">
-          <ul
-            className="
-              grid w-full text-center
-              grid-cols-2 sm:grid-cols-3 lg:grid-cols-6
-              divide-y divide-white/10 sm:divide-y-0 lg:divide-x lg:divide-white/20
-            "
-          >
-            {stats.map((s) => (
-              <li key={s.key} className="px-4">
-                <div className="flex flex-col items-center justify-center py-5">
-                  <span className="md:text-xl lg:text-2xl text-white ">
-                    {s.value}
-                  </span>
-                  <span className="mt-2 text-[10px] md:text-xs tracking-[0.12em] text-white/60 uppercase">
-                    {s.caption}
-                  </span>
-                </div>
-              </li>
-            ))}
-          </ul>
+      <div className="absolute bottom-0 left-0 w-full z-50 px-4 sm:px-6 md:px-20 pb-4 sm:pb-6">
+        <div className="mx-auto w-full rounded-none md:rounded-xl">
+          {/* Wrapper enables horizontal scroll on mobile */}
+          <div className="overflow-x-auto " style={{ scrollbarWidth: "none" }}>
+            <ul
+              className="
+          flex sm:grid sm:w-full text-center
+          sm:grid-cols-3 lg:grid-cols-6
+          divide-y divide-white/10 sm:divide-y-0 lg:divide-x lg:divide-white/20
+          min-w-[600px] sm:min-w-0
+        "
+            >
+              {stats.map((s) => (
+                <li key={s.key} className="px-6 sm:px-4 w-[50%] sm:w-auto">
+                  <div className="flex flex-col items-center justify-center py-4 sm:py-5">
+                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-white whitespace-nowrap">
+                      {s.value}
+                    </span>
+                    <span className="mt-1 sm:mt-2 text-[10px] md:text-xs tracking-[0.12em] text-white/60 uppercase whitespace-nowrap">
+                      {s.caption}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
