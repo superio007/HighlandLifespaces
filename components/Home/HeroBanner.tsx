@@ -35,31 +35,31 @@ const HeroBanner = () => {
       {/* Content (add your hero copy here) */}
       <div className="relative z-10 container mx-auto px-6 md:px-20 py-12 flex items-center justify-center w-full h-full">
         <div className="flex flex-col gap-6 w-full md:w-1/2">
-          <h1 className="text-3xl md:text-6xl text-white font-[YourSerif]">
+          <h1 className="text-3xl md:text-7xl text-white font-[YourSerif]">
             Highland Mayfield
           </h1>
-          <p className="text-white">
+          <p className="text-white text-md">
             Highland Mayfields embodies meticulous design and a commitment to{" "}
             <br />
             excellence. From the grand lobby to personalized services, every
             detail <br /> enhances your living experience. It's more than a
             residence-It's a symbol <br /> of refined, functional elegance
           </p>
-          <button className="uppecase text-lg bg-[#005e5e] text-white py-3 px-12 w-max">
+          <button className="uppecase hover:cursor-pointer text-lg bg-[#005e5e] text-white py-3 px-12 w-max">
             Enquire Now
           </button>
         </div>
-        <div className="w-full relative md:w-1/2">
+        <div className="w-full md:w-1/2">
           <Image
             src={BannerBuildingImg}
             alt="Banner Building"
-            className="absolute -right-28  top-0"
+            className="absolute -right-116 w-400 -top-32 z-0"
           />
         </div>
       </div>
 
       {/* Bottom stats bar */}
-      <div className="absolute bottom-0 left-0 w-full px-6 md:px-20 pb-6">
+      <div className="absolute bottom-0 left-0 w-full z-50 px-6 md:px-20 pb-6">
         <div className="mx-auto w-full rounded-none md:rounded-xl ">
           <ul
             className="

@@ -58,7 +58,7 @@ const FAQSection = () => {
                   onClick={() => toggle(i)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${i}`}
-                  className="group flex w-full items-center justify-between text-left"
+                  className="group flex w-full hover:cursor-pointer items-center justify-between text-left"
                 >
                   <span className="block text-lg md:text-xl text-gray-900">
                     {item.q}

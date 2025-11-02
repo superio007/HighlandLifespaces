@@ -56,7 +56,7 @@ const GallerySection = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab as keyof typeof galleryData)}
-              className={`relative pb-1 text-lg transition-all ${
+              className={`relative pb-1 text-lg hover:cursor-pointer transition-all ${
                 activeTab === tab
                   ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
                   : "text-gray-400 hover:text-white"
@@ -102,13 +102,13 @@ const GallerySection = () => {
         <div className="flex justify-center gap-4">
           <button
             onClick={handlePrev}
-            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition"
+            className="p-3 rounded-full hover:cursor-pointer bg-white/10 hover:bg-white/20 transition"
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
           <button
             onClick={handleNext}
-            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition"
+            className="p-3 rounded-full hover:cursor-pointer bg-white/10 hover:bg-white/20 transition"
           >
             <ArrowRight className="w-5 h-5" />
           </button>

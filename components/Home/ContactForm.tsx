@@ -37,7 +37,7 @@ const Input = ({
   </label>
 );
 
-export default function ContactForm({ onSubmit }: Props) {
+export default function ContactForm() {
   const {
     handleSubmit,
     register,
@@ -54,9 +54,8 @@ export default function ContactForm({ onSubmit }: Props) {
   });
 
   const submit = async (values: ContactFormValues) => {
-    if (onSubmit) await onSubmit(values);
-    // demo only
     console.log("Contact form:", values);
+    alert("Form submitted successfully!");
     reset();
   };
 
@@ -151,7 +150,7 @@ export default function ContactForm({ onSubmit }: Props) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex items-center justify-center bg-teal-800 text-white px-6 py-3 text-sm tracking-wide hover:bg-teal-900 disabled:opacity-60"
+          className="inline-flex items-center justify-center hover:cursor-pointer bg-teal-800 text-white px-6 py-3 text-sm tracking-wide hover:bg-teal-900 disabled:opacity-60"
         >
           REQUEST A CALL BACK
         </button>

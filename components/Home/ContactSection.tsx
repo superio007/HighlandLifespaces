@@ -5,9 +5,6 @@ import ContactForm, { ContactFormValues } from "./ContactForm";
 import PropertyMark from "@/assets/PropertyMark.png";
 
 export default function ContactSection() {
-  const handleSubmit = async (values: ContactFormValues) => {
-    console.log("Submit to API", values);
-  };
 
   return (
     <section className="relative w-full">
@@ -30,7 +27,7 @@ export default function ContactSection() {
             <h2 className="font-serif text-5xl md:text-6xl text-gray-900 mb-8">
               Contact us
             </h2>
-            <ContactForm onSubmit={handleSubmit} />
+            <ContactForm />
           </div>
 
           {/* Right: Marker + info card */}

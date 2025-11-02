@@ -47,7 +47,7 @@ const Navbar = () => {
           {/* Menu Icon */}
           <button
             onClick={() => setIsOpen(true)}
-            className="transition-transform hover:scale-105"
+            className="transition-transform hover:cursor-pointer hover:scale-105"
           >
             <Image src={MenuIcon} alt="Menu Icon" width={28} height={28} />
           </button>

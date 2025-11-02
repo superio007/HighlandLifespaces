@@ -112,7 +112,7 @@ export default function AmenitiesShowcase() {
               <li key={a.key}>
                 <button
                   onClick={() => changeAmenity(a)}
-                  className={`flex flex-col items-center justify-center gap-2 py-5 w-full transition-all ${
+                  className={`flex flex-col items-center justify-center hover:cursor-pointer gap-2 py-5 w-full transition-all ${
                     a.key === active.key
                       ? "text-white scale-105"
                       : "text-white/70 hover:text-white"

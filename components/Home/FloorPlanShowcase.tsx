@@ -44,7 +44,7 @@ function Tabs({
           <button
             key={label}
             onClick={() => onChange(i)}
-            className={`relative px-3 py-2 text-lg md:text-xl transition-colors ${
+            className={`relative px-3 py-2 hover:cursor-pointer text-lg md:text-xl transition-colors ${
               active ? "text-gray-900" : "text-gray-500 hover:text-gray-800"
             }`}
             aria-pressed={active}
