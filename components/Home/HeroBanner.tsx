@@ -25,6 +25,7 @@ const HeroBanner = () => {
       <Image
         src={HeroBannerImg}
         alt="Hero Banner"
+        loading="eager"
         fill
         priority
         className="object-cover object-center -z-10"
